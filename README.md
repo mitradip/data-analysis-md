@@ -39,6 +39,7 @@ This file contains the codes for analysis of the system. It has different classe
     *   **double calc\_dist\_pbc(long int id1,long int id2):** This function returns the distance between two atoms with _id1_ and _id2_ implementing PBC.
     *   **void get\_idx\_of(string src,std::vector<int> &v):** This functions stores all the index of atoms with name _src_ in referenced vector _v_.
     *   **void pair\_rdf\_fn(double start, double stop, double interval, const string pairs\[\], std::vector <array <double,2>> &rdf):** This function calculates the RDF of the current frame between atom types given in _pairs\[\]_. The variables _start, stop_ and _interval_ defines the start, end and mesh size of the RDF, in referenced vector _rdf._ The RDF implements PBC conditions and hence non-zero results exists only up to half of box length.
+    *   **bool interact\_2(long id1,long id2,double d12l,double d12h):** This function checks if two atoms, given by indices _id1_ and _id2_ interact via a distance between _d12l_ and _d12h_.
 
 *   **class trajectory:** This class represents the trajectory of the atoms and implements a vector of frames in order to achieve this target.
 
