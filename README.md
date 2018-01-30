@@ -49,6 +49,8 @@ This file contains the codes for analysis of the system. It has different classe
     *   **double idx\_msd\_fn(int dt,const int idx):** This function calculates and returns the MSD of atom present in index _idx_ for a frame (or time) interval _dt_.
     *   **double type\_msd\_fn(int dt,const string src):** This function calculates and returns the MSD of an atom type _src_ over the whole ensemble for a frame (or time) interval _dt_. This implements the _idx\_msd\_fn_.
     *   **void type\_msd\_fn\_all\_dt(const string src,std::vector<array<double,2>> &v):** This function calculates the overall MSD for all possible frame intervals, 1 to (no of frames-1), for a given atom type _src_ and stores it in the reference vector _v_.
+    *   **void intr\_cnt\_3(const string atm1,const string atm2,const string atm3,double d12l,double d12h,double d23l,double d23h,double a123l,double a123h,std::vector<array<long,2>> &v):** This function counts the number interacting atoms with atom types _atm1_, _atm2_ and _atm3_ in each time step such that the distance between 1 & 2 lies between _d12l_ and _d12h_, distance between 2 & 3 lies between _d23l_ and _d23h_ and angle 123 (in degrees) is between _a123l_ and _a123h_, and stores the data in vector _v_.
+    *   **void intr\_cnt\_2(const string atm1,const string atm2,double d12l,double d12h,std::vector<array<long,2>> &v):** This function counts the number of atoms of types _atm1_ and _atm2_ in each time step interacting via a distance between _d12l_ and _d12h_.
 
 File: rdf_1.cpp
 ---------------
@@ -59,3 +61,8 @@ File: msd_1.cpp
 ---------------
 
 This file contains the _main()_ function demonstrating a sample MSD run.
+
+File: intr_2.cpp
+----------------
+
+This file contains the _main()_ function demonstrating a sample interactional statistics study.
