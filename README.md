@@ -1,8 +1,5 @@
 # Documentation: The Analysis Codes
- 
 
-The Analysis Codes
-==================
 
 Author: MITRADIP DAS, NISER, Bhubaneswar
 
