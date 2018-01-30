@@ -41,6 +41,9 @@ This file contains the codes for analysis of the system. It has different classe
     *   **void pair\_rdf\_fn(double start, double stop, double interval, const string pairs\[\], std::vector <array <double,2>> &rdf):** This function calculates the RDF of the current frame between atom types given in _pairs\[\]_. The variables _start, stop_ and _interval_ defines the start, end and mesh size of the RDF, in referenced vector _rdf._ The RDF implements PBC conditions and hence non-zero results exists only up to half of box length.
     *   **bool interact\_2(long id1,long id2,double d12l,double d12h):** This function checks if two atoms, given by indices _id1_ and _id2_ interact via a distance between _d12l_ and _d12h_.
     *   **bool interact\_3(long id1,long id2,long id3,double d12l,double d12h,double d23l,double d23h,double a123l,double a123h):** This function checks if three atoms, with id's _id1_, _id2_ and _id3_ are interacting such that the distance between 1 & 2 lies between _d12l_ and _d12h_, distance between 2 & 3 lies between _d23l_ and _d23h_ and angle 123 (in degrees) is between _a123l_ and _a123h_.
+    *   **long cnt\_intr\_2(const string atm1,const string atm2,double d12l,double d12h):** This function counts the number of atoms of types _atm1_ and _atm2_ interacting via a distance between _d12l_ and _d12h_.
+    *   **long cnt\_intr\_3(const string atm1,const string atm2,const string atm3,double d12l,double d12h,double d23l,double d23h,double a123l,double a123h):** This function counts the number interacting atoms with atom types _atm1_, _atm2_ and _atm3_ such that the distance between 1 & 2 lies between _d12l_ and _d12h_, distance between 2 & 3 lies between _d23l_ and _d23h_ and angle 123 (in degrees) is between _a123l_ and _a123h_.
+ 
  
 *   **class trajectory:** This class represents the trajectory of the atoms and implements a vector of frames in order to achieve this target.
 
