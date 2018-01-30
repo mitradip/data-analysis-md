@@ -28,11 +28,11 @@ This file contains the codes for analysis of the system. It has different classe
 
 *   **class atom:** Each object of this class represents an atom and it contains properties of atom like ID, name, Residue (molecule) ID and coordinates.
 
-*   **void show():** This is used to display the atom and the above properties.
+ *   **void show():** This is used to display the atom and the above properties.
 
-*   **class frame:** This frame represents one frame from a run of MD simulation. It contains information of multiple atoms (implemented as a vector) and the corresponding box length of the frame.
+ *   **class frame:** This frame represents one frame from a run of MD simulation. It contains information of multiple atoms (implemented as a vector) and the corresponding box length of the frame.
 
-*   **long int read\_file(string file\_name,long int start_line):** This function reads the atoms from a PDB file _file_name_ generated using VMD (implementing PBC) with get pointer from _start_line_ till "END" is encountered. It returns the current position of the get pointer in the file (useful while implementing multiple frames).
+ *   **long int read\_file(string file\_name,long int start_line):** This function reads the atoms from a PDB file _file_name_ generated using VMD (implementing PBC) with get pointer from _start_line_ till "END" is encountered. It returns the current position of the get pointer in the file (useful while implementing multiple frames).
 *   **void clear_all()**: Clear all the information present in a frame.
 *   **void set_box(double len):** Sets the box length to _len._
 *   **void show_frame():** Display all the data of the whole frame.
