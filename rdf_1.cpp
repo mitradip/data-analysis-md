@@ -7,10 +7,10 @@ For documentation, please look into doc.html
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-  string pdb_name="Data/last_1000_frames.pdb";
+  string pdb_name="Data/sample_1000_frames.pdb";
   long int st=line_skip(pdb_name,0,1);
   trajectory tt;
-  long int pp=tt.read_frames(pdb_name,st,1000,57.594476);
+  long int pp=tt.read_frames(pdb_name,st,1000,50.0);
   std::vector<array<double,2>> v;
   string pr[]={"C2","C2"};
   tt.pair_rdf_fn(0,30.0,0.1,pr,v);
