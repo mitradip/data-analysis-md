@@ -2,13 +2,25 @@
 
 Author: ***MITRADIP DAS***, NISER, Bhubaneswar, India.
 
-## Compiler Information:
+**Table of Contents:**
+
+* [Compiler Information](#compiler)
+* [Documentation](#doc)
+    * [libraries.h](#lib)
+    * [analysis.cpp](#anls)
+    * [rdf_1.cpp](#rdf)
+    * [msd_1.cpp](#msd)
+    * [intr_1.cpp](#intr)
+    * [tcf_1.cpp](#tcf)
+* [Designing your own library](#design)
+
+## Compiler Information: <a name="compiler"></a>
 
 The codes were compiled and tested using **clang++-5.0** using **c++14 standard** in **Linux 4.8** (Linux Mint 18.2). The files _analysis.cpp_ and _cpp_include/libraries.h_ **should not** be compiled as stand alone files and are meant to be used as libraries. For running the code, kindly compile the files with _main()_ functions only (like _rdf_1.cpp_) as per the requirements. You are also invited to design your own libraries, the instructions for which are given later in this file.
 
-## Documentation:
+## Documentation: <a name="doc"></a>
 
-### File: cpp_include/libraries.h
+### File: cpp_include/libraries.h <a name="lib"></a>
 
 This file contains different libraries and generic functions used in the code. It references to different standard c++ libraries like _iostream_, _fstream_ etc. The generic functions contained are:
 
@@ -17,7 +29,7 @@ This file contains different libraries and generic functions used in the code. I
 *   **std::string trim(const std::string& str):** This function trims a string _str_ using _trim_left_ and _trim_right._
 *   **long int line\_skip(string file\_name,long int start_pos,long int lines):** This functions returns the position of the get pointer in file _file_name_ after skipping _lines_ lines starting from position of get pointer _start_pos_.
 
-### File: analysis.cpp
+### File: analysis.cpp <a name="anls"></a>
 
 This file contains the codes for analysis of the system. It has different classes for different sections of the work. This file implements _cpp_include/libraries.h_.
 
@@ -52,22 +64,22 @@ This file contains the codes for analysis of the system. It has different classe
     *   **void tcf\_2\_all\_dt\_im(const string atm1,const string atm2,double d12l,double d12h,std::vector<array<double,2>> &v):** Gives the time correlation function (survival proablity) between atom types _atm1_ and _atm2_ interacting via distance between _d12l_ and _d12h_, with intermediate approximation, and stores it in vector _v_ for all time steps.
     *   **void tcf\_2\_all\_dt(const string atm1,const string atm2,double d12l,double d12h,std::vector<array<double,2>> &v) :** Gives the time correlation function (survival proablity) between atom types _atm1_ and _atm2_ interacting via distance between _d12l_ and _d12h_, without intermediate approximation, and stores it in vector _v_ for all time steps.
 
-### File: rdf_1.cpp
+### File: rdf_1.cpp <a name="rdf"></a>
 
 This file contains the _main()_ function demonstrating a sample RDF run.
 
-### File: msd_1.cpp
+### File: msd_1.cpp <a name="msd"></a>
 
 This file contains the _main()_ function demonstrating a sample MSD run.
 
-### File: intr_1.cpp
+### File: intr_1.cpp <a name="intr"></a>
 
 This file contains the _main()_ function demonstrating a sample interactional statistics study.
 
-### File: tcf_1.cpp
+### File: tcf_1.cpp <a name="tcf"></a>
 
 This file contains the _main()_ function demonstrating a sample interactional dynamics (time correlation function) study without intermediate approximation.
 
-## Designing your own library
+## Designing your own library <a name="design"></a>
 
 You are always invited to design your own libraries on this code and contact the author about the same, if you want it to be implemented. Please download _analysis.cpp_ and _cpp\_include/libraries.h_ and generate your own C++ code for the analysis required. You may consider looking at the sample codes for reference. Please note that _libraries.h_ has to be inside _cpp\_include_ directory.
