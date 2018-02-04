@@ -12,8 +12,8 @@ int main(int argc, char const *argv[]) {
   trajectory tt;
   long int pp=tt.read_frames(pdb_name,st,1000,50.0);
   std::vector<array<double,2>> v;
-  string pr[]={"C2","C2"};
-  tt.pair_rdf_fn(0,30.0,0.1,pr,v);
+  string pr[]={"C","CH"};
+  tt.pair_rdf_fn(0,26.0,0.1,pr,v);
   for(int i=0;i<v.size();++i) {
     std::cout << v[i][0] << " " << v[i][1] << '\n';
   }
