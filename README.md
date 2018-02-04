@@ -68,6 +68,6 @@ This file contains the _main()_ function demonstrating a sample interactional st
 
 This file contains the _main()_ function demonstrating a sample interactional dynamics (time correlation function) study without intermediate approximation.
 
-## For designing your own library
+## Designing your own library
 
-Kindly download _analysis.cpp_ and _cpp\_include/libraries.h_ and generate your own C++ code for the analysis required. You may consider looking at the sample codes for reference. Please note that _libraries.h_ has to be inside _cpp\_include_ directory.
+You are always invited to design your own libraries on this code and contact the author about the same, if you want it to be implemented. Please download _analysis.cpp_ and _cpp\_include/libraries.h_ and generate your own C++ code for the analysis required. You may consider looking at the sample codes for reference. Please note that _libraries.h_ has to be inside _cpp\_include_ directory.
