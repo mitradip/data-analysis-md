@@ -14,13 +14,13 @@ Author: ***MITRADIP DAS***, NISER, Bhubaneswar, India.
     * [tcf_1.cpp](#tcf)
 * [Designing your own library](#design)
 
-## Compiler Information: <a name="compiler"></a>
+## <a name="compiler"></a> Compiler Information:
 
 The codes were compiled and tested using **clang++-5.0** using **c++14 standard** in **Linux 4.8** (Linux Mint 18.2). The files _analysis.cpp_ and _cpp_include/libraries.h_ **should not** be compiled as stand alone files and are meant to be used as libraries. For running the code, kindly compile the files with _main()_ functions only (like _rdf_1.cpp_) as per the requirements. You are also invited to design your own libraries, the instructions for which are given later in this file.
 
-## Documentation: <a name="doc"></a>
+## <a name="doc"></a>Documentation: 
 
-### File: cpp_include/libraries.h <a name="lib"></a>
+### <a name="lib"></a>File: cpp_include/libraries.h
 
 This file contains different libraries and generic functions used in the code. It references to different standard c++ libraries like _iostream_, _fstream_ etc. The generic functions contained are:
 
@@ -64,22 +64,22 @@ This file contains the codes for analysis of the system. It has different classe
     *   **void tcf\_2\_all\_dt\_im(const string atm1,const string atm2,double d12l,double d12h,std::vector<array<double,2>> &v):** Gives the time correlation function (survival proablity) between atom types _atm1_ and _atm2_ interacting via distance between _d12l_ and _d12h_, with intermediate approximation, and stores it in vector _v_ for all time steps.
     *   **void tcf\_2\_all\_dt(const string atm1,const string atm2,double d12l,double d12h,std::vector<array<double,2>> &v) :** Gives the time correlation function (survival proablity) between atom types _atm1_ and _atm2_ interacting via distance between _d12l_ and _d12h_, without intermediate approximation, and stores it in vector _v_ for all time steps.
 
-### File: rdf_1.cpp <a name="rdf"></a>
+### <a name="rdf"></a> File: rdf_1.cpp 
 
 This file contains the _main()_ function demonstrating a sample RDF run.
 
-### File: msd_1.cpp <a name="msd"></a>
+### <a name="msd"></a>File: msd_1.cpp
 
 This file contains the _main()_ function demonstrating a sample MSD run.
 
-### File: intr_1.cpp <a name="intr"></a>
+### <a name="intr"></a>File: intr_1.cpp
 
 This file contains the _main()_ function demonstrating a sample interactional statistics study.
 
-### File: tcf_1.cpp <a name="tcf"></a>
+### <a name="tcf"></a>File: tcf_1.cpp
 
 This file contains the _main()_ function demonstrating a sample interactional dynamics (time correlation function) study without intermediate approximation.
 
-## Designing your own library <a name="design"></a>
+## <a name="design"></a>Designing your own library 
 
 You are always invited to design your own libraries on this code and contact the author about the same, if you want it to be implemented. Please download _analysis.cpp_ and _cpp\_include/libraries.h_ and generate your own C++ code for the analysis required. You may consider looking at the sample codes for reference. Please note that _libraries.h_ has to be inside _cpp\_include_ directory.
