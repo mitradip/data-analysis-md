@@ -4,7 +4,7 @@ Author: ***MITRADIP DAS***, NISER, Bhubaneswar, India.
 
 ## Compiler Information:
 
-The codes were compiled and tested using **clang++-5.0** using **c++14 standard** in **Linux 4.8** (Linux Mint 18.2). Compilation should be done for _rdf_1.cpp_ or _msd_1.cpp_ only as per the requirements.
+The codes were compiled and tested using **clang++-5.0** using **c++14 standard** in **Linux 4.8** (Linux Mint 18.2). The files _analysis.cpp_ and _cpp_include/libraries.h_ **should not** be compiled as stand alone files and are meant to be used as libraries. For running the code, kindly compile the files with _main()_ functions only (like _rdf_1.cpp_) as per the requirements. You are also invited to design your own libraries, the instructions for which are given later in this file.
 
 ## Documentation:
 
